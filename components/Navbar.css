@@ -1,0 +1,89 @@
+/* Navbar.css */
+
+nav {
+    width: 100vw;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    background-color:beige;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    backdrop-filter: blur(20px);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+   
+  .nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .nav__logo {
+    width: 5rem;
+    display: block;
+    animation: logoAnimation 1s ease-in-out;
+  }
+  
+  .nav__menu {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+   
+  
+
+
+  .nav__toggle-btn {
+    display: none;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }    
+  }
+  
+  @keyframes logoAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Add slide-in animation when menu is active */
+  .nav__menu--active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-bottom: 4px solid var(--color-bg);
+    z-index: 1;
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

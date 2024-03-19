@@ -1,0 +1,47 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+  }
+  
+  .author-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .heading {
+    font-size: 3rem;
+    color:white;
+  }
+  
+  .paragraph {
+    font-size: 1.5rem;
+    color:white;
+  }
+  
+  .author-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .author-card {
+    text-align: center;
+    max-width: 300px;
+    margin: 20px;
+    color:white;
+    font-family:italic;
+
+  }
+  
+  .author-image {
+    width: 100%;
+    height: auto;
+  }
+  
